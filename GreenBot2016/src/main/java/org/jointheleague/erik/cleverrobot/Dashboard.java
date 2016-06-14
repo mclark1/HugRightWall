@@ -130,27 +130,15 @@ public class Dashboard extends IOIOActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == MY_DATA_CHECK_CODE) {
-            if (resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS) {
-                // success, create the TTS instance
-                mTts = new TextToSpeech(this, this);
-            } else {
-                // missing data, install it
-                Intent installIntent = new Intent();
-                installIntent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
-                startActivity(installIntent);
-            }
+
         }
     }
 
     public void onInit(int arg0) {
+
     }
 
-    public void speak(String stuffToSay) {
-        mTts.setLanguage(Locale.US);
-        if (!mTts.isSpeaking()) {
-            mTts.speak(stuffToSay, TextToSpeech.QUEUE_FLUSH, null);
-        }
-    }
+
 
     @Override
     public void onAccuracyChanged(Sensor arg0, int arg1) {

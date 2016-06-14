@@ -44,17 +44,16 @@ public class Pilot extends IRobotAdapter {
     /** This method is executed when the robot first starts up. **/
     public void initialize() throws ConnectionLostException {
         //what would you like me to do, Clever Human?
-
-
-
+        dashboard.log("Initializing");
     }
-
     /** This method is called repeatedly. **/
     public void loop() throws ConnectionLostException {
-
-
-
-
+        driveDirect(450,150);
+            readSensors(SENSORS_BUMPS_AND_WHEEL_DROPS);
+        if (isBumpRight()) {
+            driveDirect(-400, -50);
+            SystemClock.sleep(900);
+        }
     }
 
     /**
