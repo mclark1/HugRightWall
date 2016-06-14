@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/league/GreenBot2016/iOIOiRobot2/build/intermediates/res/merged/release/values/values.xml",
+        "outputFile": "C:\\Users\\Admin\\StudioProjects\\GreenBot2016\\iOIOiRobot2\\build\\intermediates\\res\\merged\\release\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 100
                 },
                 "from": {
-                    "file": "/Users/league/GreenBot2016/iOIOiRobot2/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\Admin\\StudioProjects\\GreenBot2016\\iOIOiRobot2\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 55,
+                        "startOffset": 57,
                         "endColumn": 49,
-                        "endOffset": 100
+                        "endOffset": 102
                     }
                 }
             },
@@ -30,7 +30,7 @@
                     "endOffset": 158
                 },
                 "from": {
-                    "file": "/Users/league/GreenBot2016/iOIOiRobot2/build/intermediates/exploded-aar/GreenBot2016/iOIOLib/unspecified/res/values/values.xml",
+                    "file": "C:\\Users\\Admin\\StudioProjects\\GreenBot2016\\iOIOiRobot2\\build\\intermediates\\exploded-aar\\GreenBot2016\\iOIOLib\\unspecified\\res\\values\\values.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,

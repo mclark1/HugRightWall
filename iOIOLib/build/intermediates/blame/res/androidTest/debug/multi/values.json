@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/league/GreenBot2016/iOIOLib/build/intermediates/res/merged/androidTest/debug/values/values.xml",
+        "outputFile": "C:\\Users\\Admin\\StudioProjects\\GreenBot2016\\iOIOLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 95
                 },
                 "from": {
-                    "file": "/Users/league/GreenBot2016/iOIOLib/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "C:\\Users\\Admin\\StudioProjects\\GreenBot2016\\iOIOLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 153
                 },
                 "from": {
-                    "file": "/Users/league/GreenBot2016/iOIOLib/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "C:\\Users\\Admin\\StudioProjects\\GreenBot2016\\iOIOLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
