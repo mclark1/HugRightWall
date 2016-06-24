@@ -29,6 +29,7 @@ public class Pilot extends IRobotAdapter {
     private int directionRight;
     private static final int STRAIGHT_SPEED = 200;
     private static final int TURN_SPEED = 100;
+    private int[] light = new int[6];
 
     private int currentCommand = 0;
     private final boolean debug = true; // Set to true to get debug messages.
@@ -41,35 +42,92 @@ public class Pilot extends IRobotAdapter {
         dashboard.log(dashboard.getString(R.string.hello));
     }
 
-    /** This method is executed when the robot first starts up. **/
+    /**
+     * This method is executed when the robot first starts up.
+     **/
     public void initialize() throws ConnectionLostException {
         //what would you like me to do, Clever Human?
         dashboard.log("Initializing");
+    }
+
+
+    /**
+     * This method is called repeatedly.
+     **/
+    public void loop() throws ConnectionLostException {
+        //MAZE_CODE
+//        driveDirect(500,200);
+//        readSensors(100);
+//        light = getLightBumps();
+//        dashboard.log(light[1] + "light 1, left");
+//        dashboard.log(light[2] + "light 2, left front");
+//        dashboard.log(light[4] + "light 4, right front");
+//        dashboard.log(light[5] + "light 5, right");
+//        dashboard.log(light[3] + "light 3, idk");
+//        dashboard.log(getInfraredByte()+ "");
+//        if (light[3] > 0){
+//        driveDirect(-200,500);
+//        SystemClock.sleep(160);
+//        }
+//        if (isBumpRight() && isBumpLeft()){
+//            driveDirect(-200,500);
+//            SystemClock.sleep(160);
+//        }
+//        if (light[5] > 0){
+//            driveDirect(-200,500);
+//            SystemClock.sleep(160);
+//        }
+//        if (light[4] > 0){
+//            driveDirect(-200,500);
+//            SystemClock.sleep(160);
+//        }
+//        if (isBumpRight()){
+//            driveDirect(-200,500);
+//            SystemClock.sleep(130);
+//        }
+//        if (isBumpLeft()){
+//            driveDirect(500,-200);
+//            SystemClock.sleep(200);
+//        }
+//        if (getInfraredByte() > 0){
+//            driveDirect(500,500);
+//            SystemClock.sleep(5000);
+//        }
+
+//        if (isBumpRight()) {
+//            driveDirect(-400, -10);
+//            SystemClock.sleep(900);
+//        }
+//        readSensors(101);
+//        if (isLightBump()) {
+//            driveDirect(-400, -10);
+//            SystemClock.sleep(900);
+//        }
+//        if (light[4] > 0)
+//        {
+//
+//        }
+        //    DRAG_RACE_CODE
+        light = getLightBumps();
+        readSensors(100);
+         driveDirect(500, 500);
+
+        if (light[1] > 0 || light[2] > 0) {
+            driveDirect(400, 500);
+            SystemClock.sleep(200);
+        }
+        if (light[4] > 0 || light[5] > 0) {
+            driveDirect(500, 400);
+            SystemClock.sleep(200);
+        }
+        if (light[3] > 0) {
+            driveDirect(500,-500);
+            SystemClock.sleep(500);
+        }
+
 }
 
 
-    /** This method is called repeatedly. **/
-    public void loop() throws ConnectionLostException {
-        driveDirect(450,250);
-            readSensors(SENSORS_BUMPS_AND_WHEEL_DROPS);
-        if (isBumpRight()) {
-            driveDirect(-400, -50);
-            SystemClock.sleep(900);
-        }
-        readSensors(101);
-        if (isLightBump()) {
-            driveDirect(-400, -50);
-            SystemClock.sleep(900);
-        }
-    }
-
-    /**
-     * This method determines where to go next. This is a very simple Tortoise-like
-     * implementation, but a more advanced implementation could take into account
-     * sensory input, maze mapping, and other.
-     *
-     * @throws ConnectionLostException
-     */
     private void nextCommand() throws ConnectionLostException {
 //        try {
 //            sonar.read();
